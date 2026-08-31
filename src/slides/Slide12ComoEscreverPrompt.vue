@@ -2,7 +2,7 @@
 const tips = [
   { n: '01', title: 'Seja específico', desc: 'Diga exatamente o resultado esperado, em vez de pedir algo vago.' },
   { n: '02', title: 'Dê contexto', desc: 'Quem é o público? Qual é o objetivo por trás do pedido?' },
-  { n: '03', title: 'Peça um formato', desc: 'Lista, tabela, texto corrido, e-mail pronto — diga como quer receber a resposta.' },
+  { n: '03', title: 'Peça um formato', desc: 'Lista, tabela, texto corrido, e-mail pronto: diga como quer receber a resposta.' },
   { n: '04', title: 'Itere', desc: 'Refine o pedido com base na resposta anterior, em vez de tentar acertar tudo de uma vez.' },
 ]
 </script>
@@ -11,6 +11,10 @@ const tips = [
   <section class="slide">
     <p class="slide-eyebrow">Valor prático imediato</p>
     <h2 class="slide-title">Como escrever um bom prompt</h2>
+    <p class="slide-subtitle">
+      Depois de ver riscos e guardrails, veja como você mesmo consegue melhores respostas no dia
+      a dia.
+    </p>
 
     <div class="slide-body tips-grid">
       <div v-for="t in tips" :key="t.n" class="tip-card card">

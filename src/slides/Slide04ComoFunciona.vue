@@ -22,11 +22,11 @@ function cellClass(i, used) {
           bom em prever o que vem a seguir. Na hora de responder, ele gera a resposta um
           <strong>token</strong> (pedaço de palavra) de cada vez: a cada passo, calcula qual é o
           próximo token mais provável dado tudo o que já foi dito, acrescenta esse token e
-          repete — é por isso que às vezes ele muda de direção no meio de uma resposta.
+          repete. É por isso que às vezes ele muda de direção no meio de uma resposta.
         </p>
 
         <p class="context-diagram__caption">
-          Todo esse texto — o que você escreveu e o que o modelo já gerou — precisa caber na
+          Todo esse texto (o que você escreveu e o que o modelo já gerou) precisa caber na
           <strong>janela de contexto</strong>: uma caixa com espaço limitado que vai enchendo de
           tokens conforme a conversa cresce, até atingir o limite do modelo.
         </p>

@@ -1,7 +1,7 @@
 <script setup>
 const takeaways = [
   'LLM é o motor de linguagem; Agente é esse motor + ferramentas para executar tarefas sozinho.',
-  'Não existe "o melhor modelo" — existe o modelo certo para cada tarefa e orçamento.',
+  'Não existe "o melhor modelo": existe o modelo certo para cada tarefa e orçamento.',
   'Sempre revise output crítico: alucinação e viés são reais.',
   'Um bom prompt tem contexto, especificidade, formato de saída e é refinado por iteração.',
 ]

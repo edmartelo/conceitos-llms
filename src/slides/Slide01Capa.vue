@@ -4,7 +4,7 @@
     <h1 class="cover-title">LLMs: o que são<br />e como usar bem</h1>
     <p class="slide-subtitle cover-subtitle">
       Conceitos básicos de Large Language Models e um panorama prático das
-      principais ferramentas do mercado — sem jargão técnico sem explicação.
+      principais ferramentas do mercado, sem jargão técnico sem explicação.
     </p>
     <div class="cover-tags">
       <span class="pill">Conceitos</span>

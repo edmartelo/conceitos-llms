@@ -2,7 +2,7 @@
 const cautions = [
   {
     title: 'Alucinação',
-    desc: 'O modelo pode inventar informação com aparência de confiança — sem sinalizar que está incerto.',
+    desc: 'O modelo pode inventar informação com aparência de confiança, sem sinalizar que está incerto.',
     status: 'critical',
   },
   {
@@ -12,12 +12,7 @@ const cautions = [
   },
   {
     title: 'Corte de conhecimento',
-    desc: 'O modelo só "sabe" até a data em que foi treinado — para informação recente, ele depende de busca ou RAG.',
-    status: 'warning',
-  },
-  {
-    title: 'Agentes e dados sensíveis',
-    desc: 'Um agente pode executar ações erradas ou irreversíveis sozinho, sem supervisão — e ferramentas na nuvem não são o lugar certo para dados sensíveis.',
+    desc: 'O modelo só "sabe" até a data em que foi treinado. Para informação recente, ele depende de busca ou RAG.',
     status: 'warning',
   },
 ]
@@ -41,7 +36,7 @@ const cautions = [
 
     <div class="recommendation">
       <span class="recommendation__label">Recomendação</span>
-      <p>Sempre revise output crítico. Não confie cegamente — trate o LLM como um assistente rápido, não como veredito final.</p>
+      <p>Sempre revise output crítico. Não confie cegamente: trate o LLM como um assistente rápido, não como veredito final.</p>
     </div>
   </section>
 </template>

@@ -7,7 +7,7 @@ import { mainTools, otherTools } from '../data/tools.js'
   <section class="slide">
     <p class="slide-eyebrow">Panorama do mercado</p>
     <h2 class="slide-title">Principais ferramentas</h2>
-    <p class="slide-subtitle">Cada uma com um ponto forte diferente — e um caso de uso onde brilha mais.</p>
+    <p class="slide-subtitle">Cada uma com um ponto forte diferente e um caso de uso onde brilha mais.</p>
 
     <div class="slide-body tools-grid">
       <ToolCard v-for="tool in mainTools" :key="tool.id" :tool="tool" />

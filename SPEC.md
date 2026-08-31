@@ -56,7 +56,15 @@ ESCOPO DE CONTEÚDO
 7. Limitações e cuidados (slide de credibilidade)
    - Alucinação: o modelo pode inventar informação com aparência de confiança
    - Viés herdado dos dados de treinamento
+   - Corte de conhecimento: o modelo só "sabe" até a data em que foi treinado
    - Recomendação: sempre revisar output crítico, não confiar cegamente
+
+7b. Guardrails (segurança de agentes)
+   - Conceito: regras e mecanismos que limitam o que um agente pode fazer sozinho,
+     resposta direta ao risco de ações erradas ou irreversíveis sem supervisão
+     (risco introduzido no slide de Limitações)
+   - Mecanismos: permissões explícitas, aprovação humana para ações irreversíveis,
+     sandboxing, limites de escopo e orçamento
 
 8. Como escrever um bom prompt (valor prático imediato)
    - Ser específico sobre o resultado esperado
@@ -82,10 +90,11 @@ ESTRUTURA SUGERIDA DE SLIDES
 8. Tabela comparativa relativa (custo, contexto, ponto forte) — opcional como slide extra/anexo
 9. Como escolher o modelo certo para cada tarefa
 10. Limitações e cuidados
-11. Como escrever um bom prompt
-12. Tendências e para onde o mercado está indo
-13. (Opcional) Mini quiz interativo de 2-3 perguntas ("qual modelo você usaria para X?")
-14. Encerramento/resumo
+11. Guardrails (segurança de agentes)
+12. Como escrever um bom prompt
+13. Tendências e para onde o mercado está indo
+14. (Opcional) Mini quiz interativo de 2-3 perguntas ("qual modelo você usaria para X?")
+15. Encerramento/resumo
 
 REQUISITOS TÉCNICOS DO PROJETO
 - Apresentação em formato web (vue3 com vite), navegável por slides

@@ -8,7 +8,7 @@ import { closedModels, openWeightModels } from '../data/tools.js'
     <h2 class="slide-title">Fechados vs. abertos</h2>
     <p class="slide-subtitle">
       Além disso, quase toda família de modelos tem variantes "raciocínio" (mais lentas e
-      caras, para tarefas difíceis) e variantes rápidas/leves — geralmente chamadas de
+      caras, para tarefas difíceis) e variantes rápidas/leves, geralmente chamadas de
       <em>mini</em>, <em>flash</em> ou <em>haiku</em>.
     </p>
 

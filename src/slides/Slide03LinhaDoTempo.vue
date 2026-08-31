@@ -7,7 +7,7 @@ import { timeline } from '../data/timeline.js'
     <p class="slide-eyebrow">Contexto histórico</p>
     <h2 class="slide-title">Linha do tempo rápida</h2>
     <p class="slide-subtitle">
-      Por que existem tantas ferramentas hoje — e para onde o mercado está indo.
+      Por que existem tantas ferramentas hoje e para onde o mercado está indo.
     </p>
 
     <div class="slide-body timeline">
