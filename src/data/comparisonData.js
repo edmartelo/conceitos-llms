@@ -48,12 +48,21 @@ export const comparisonRows = [
     agentic: 2,
   },
   {
-    name: 'DeepSeek / Qwen',
+    name: 'DeepSeek',
     color: 'var(--accent-violet)',
     intelligence: 3,
     cost: 5,
     speed: 4,
     context: 3,
+    agentic: 3,
+  },
+  {
+    name: 'Qwen (Alibaba)',
+    color: 'var(--accent-magenta)',
+    intelligence: 3,
+    cost: 5,
+    speed: 3,
+    context: 4,
     agentic: 2,
   },
 ]

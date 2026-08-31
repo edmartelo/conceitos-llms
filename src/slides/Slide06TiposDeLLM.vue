@@ -27,6 +27,7 @@ import { closedModels, openWeightModels } from '../data/tools.js'
         <ul>
           <li v-for="m in openWeightModels" :key="m">{{ m }}</li>
         </ul>
+        <p class="types-column__footnote">Algumas empresas, como a Mistral, oferecem tanto modelos abertos quanto fechados.</p>
       </div>
     </div>
   </section>
@@ -78,5 +79,11 @@ import { closedModels, openWeightModels } from '../data/tools.js'
   padding: 8px 12px;
   background: var(--surface-2);
   border-radius: 8px;
+}
+
+.types-column__footnote {
+  margin-top: 12px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
 }
 </style>

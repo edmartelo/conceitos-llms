@@ -20,6 +20,11 @@ export const timeline = [
     description: '"Pensam" em etapas antes de responder, melhorando tarefas complexas.',
   },
   {
+    period: '2025',
+    title: 'Modelos abertos custo-benefício',
+    description: 'Modelos open-weight (como DeepSeek) mostram desempenho competitivo por uma fração do custo, pressionando preços no mercado inteiro.',
+  },
+  {
     period: '2025–2026',
     title: 'Era dos agentes',
     description: 'Modelos ganham ferramentas e autonomia para executar tarefas inteiras, não só responder perguntas.',

@@ -6,6 +6,19 @@ const total = slides.length
 const currentIndex = ref(0)
 const direction = ref('next')
 
+const THEME_KEY = 'llm-deck-theme'
+const theme = ref('light')
+
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t)
+}
+
+function toggleTheme() {
+  theme.value = theme.value === 'dark' ? 'light' : 'dark'
+  localStorage.setItem(THEME_KEY, theme.value)
+  applyTheme(theme.value)
+}
+
 const currentSlide = computed(() => slides[currentIndex.value].component)
 
 // Only one slide transition plays at a time — extra input while one is in
@@ -63,7 +76,13 @@ function onTouchEnd(e) {
   touchStartX = null
 }
 
-onMounted(() => window.addEventListener('keydown', onKeydown))
+onMounted(() => {
+  const stored = localStorage.getItem(THEME_KEY)
+  const preferred = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+  theme.value = preferred
+  applyTheme(preferred)
+  window.addEventListener('keydown', onKeydown)
+})
 onUnmounted(() => window.removeEventListener('keydown', onKeydown))
 </script>
 
@@ -73,15 +92,40 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
       <div class="deck__progress-bar" :style="{ width: ((currentIndex + 1) / total) * 100 + '%' }"></div>
     </div>
 
+    <button
+      class="deck__theme-toggle"
+      :aria-label="theme === 'light' ? 'Mudar para tema escuro' : 'Mudar para tema claro'"
+      @click="toggleTheme"
+    >
+      <svg v-if="theme === 'light'" class="deck__theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg v-else class="deck__theme-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <line x1="12" y1="2" x2="12" y2="4"></line>
+        <line x1="12" y1="20" x2="12" y2="22"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="2" y1="12" x2="4" y2="12"></line>
+        <line x1="20" y1="12" x2="22" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+
     <Transition :name="'slide-' + direction">
       <component :is="currentSlide" :key="currentIndex" class="deck__slide" />
     </Transition>
 
     <button class="deck__nav deck__nav--prev" :disabled="currentIndex === 0" aria-label="Slide anterior" @click="prev">
-      ‹
+      <svg class="deck__nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="15 6 9 12 15 18"></polyline>
+      </svg>
     </button>
     <button class="deck__nav deck__nav--next" :disabled="currentIndex === total - 1" aria-label="Próximo slide" @click="next">
-      ›
+      <svg class="deck__nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="9 6 15 12 9 18"></polyline>
+      </svg>
     </button>
 
     <div class="deck__footer">
@@ -140,15 +184,52 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
   border: 1px solid var(--border);
   background: var(--surface-1);
   color: var(--text-primary);
-  font-size: 2rem;
-  line-height: 1;
+  padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 5;
-  box-shadow: 0 2px 8px rgba(20, 20, 15, 0.08);
+  box-shadow: 0 2px 8px var(--shadow-nav);
   transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.deck__nav-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.deck__theme-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  color: var(--text-primary);
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  box-shadow: 0 2px 8px var(--shadow-nav);
+  transition: border-color 0.15s ease, transform 0.1s ease;
+}
+
+.deck__theme-toggle:hover {
+  border-color: var(--accent-blue);
+}
+
+.deck__theme-toggle:active {
+  transform: scale(0.92);
+}
+
+.deck__theme-toggle-icon {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .deck__nav:hover:not(:disabled) {
@@ -210,14 +291,27 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
   .deck__nav {
     width: 2.2rem;
     height: 2.2rem;
-    font-size: 1.3rem;
     bottom: 64px;
+  }
+  .deck__nav-icon {
+    width: 0.95rem;
+    height: 0.95rem;
   }
   .deck__nav--prev {
     left: 12px;
   }
   .deck__nav--next {
     right: 12px;
+  }
+  .deck__theme-toggle {
+    width: 2.1rem;
+    height: 2.1rem;
+    top: 12px;
+    right: 12px;
+  }
+  .deck__theme-toggle-icon {
+    width: 0.9rem;
+    height: 0.9rem;
   }
   .deck__footer {
     bottom: 16px;

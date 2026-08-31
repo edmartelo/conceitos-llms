@@ -26,7 +26,7 @@ import { timeline } from '../data/timeline.js'
 .timeline {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   padding-top: 8px;
 }
@@ -34,8 +34,8 @@ import { timeline } from '../data/timeline.js'
 .timeline__line {
   position: absolute;
   top: 5px;
-  left: calc(10% - 8px);
-  right: calc(10% - 8px);
+  left: calc(100% / 12 - 8px);
+  right: calc(100% / 12 - 8px);
   height: 2px;
   background: var(--gridline);
 }

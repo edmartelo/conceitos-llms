@@ -18,11 +18,13 @@ const modelTypes = [
 ]
 
 const glossary = [
-  { term: 'Parâmetros', desc: 'Os "ajustes internos" do modelo, aprendidos durante o treinamento. Mais parâmetros costuma significar mais capacidade.' },
+  { term: 'Parâmetros', desc: 'Os "ajustes internos" do modelo, aprendidos durante o treinamento. Mais parâmetros geralmente ajuda, mas hoje a qualidade dos dados de treino e a técnica usada pesam tanto quanto o tamanho.' },
   { term: 'Tokens', desc: 'Pedaços de texto (não letras, nem sempre palavras inteiras) que o modelo lê e gera.' },
   { term: 'Janela de contexto', desc: 'Quantidade de texto que o modelo consegue "ter em mente" ao mesmo tempo em uma conversa.' },
   { term: 'Fine-tuning', desc: 'Treinamento adicional, mais específico, para especializar um modelo em uma tarefa ou domínio.' },
   { term: 'RAG', desc: 'Retrieval-Augmented Generation: o modelo busca informação externa antes de responder, em vez de confiar só na memória.' },
+  { term: 'API', desc: 'Forma de um app "conversar" com o modelo pela internet — é assim que ferramentas de terceiros usam um LLM sem rodar nada localmente.' },
+  { term: 'Multimodal', desc: 'Modelo que entende e gera mais de um tipo de conteúdo — texto, imagem, áudio — dentro do mesmo sistema.' },
 ]
 </script>
 

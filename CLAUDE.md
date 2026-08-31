@@ -44,8 +44,12 @@ Vue 3 + Vite, single-page app, no router — it's a slide deck, not a multi-rout
 - `src/components/ToolCard.vue`, `ComparisonTable.vue` — reusable presentational components
   used by the tools slide and the comparison-table slide respectively.
 - `src/style.css` — global design tokens (CSS custom properties) and shared slide primitives
-  (`.slide`, `.slide-title`, `.card`, `.pill`, etc.) that every slide component builds on. The
-  app is dark-theme-only (no light-mode/theme-toggle support).
+  (`.slide`, `.slide-title`, `.card`, `.pill`, etc.) that every slide component builds on. Light
+  theme lives on `:root`; dark theme (neon accents on a near-black ground) overrides the same
+  tokens under `:root[data-theme='dark']`. `SlideDeck.vue` owns the toggle button, sets/reads
+  `documentElement[data-theme]`, and persists the choice in `localStorage` (falls back to
+  `prefers-color-scheme` on first visit). Slide components must keep using the CSS variables
+  (never hardcode colors) so both themes stay correct automatically.
 
 ## Content/design constraints from the spec
 

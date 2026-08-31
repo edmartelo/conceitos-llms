@@ -39,7 +39,7 @@ export const mainTools = [
     initials: 'L',
     color: 'var(--accent-yellow)',
     type: 'Aberto (open-weight, self-hosted)',
-    tagline: 'Principal opção open source, sem custo de licença — pode rodar dentro da própria empresa.',
+    tagline: 'Principal opção open-weight, sem custo de licença para a maioria dos usos — pode rodar dentro da própria empresa.',
     useCaseLabel: 'Caso de uso',
     useCase: 'Empresa que não pode enviar dados sensíveis para a nuvem.',
   },

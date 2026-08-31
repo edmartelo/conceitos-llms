@@ -10,6 +10,16 @@ const cautions = [
     desc: 'Reflete padrões e desequilíbrios presentes nos dados de treinamento.',
     status: 'warning',
   },
+  {
+    title: 'Corte de conhecimento',
+    desc: 'O modelo só "sabe" até a data em que foi treinado — para informação recente, ele depende de busca ou RAG.',
+    status: 'warning',
+  },
+  {
+    title: 'Agentes e dados sensíveis',
+    desc: 'Um agente pode executar ações erradas ou irreversíveis sozinho, sem supervisão — e ferramentas na nuvem não são o lugar certo para dados sensíveis.',
+    status: 'warning',
+  },
 ]
 </script>
 

@@ -19,6 +19,15 @@ const tips = [
         <p>{{ t.desc }}</p>
       </div>
     </div>
+
+    <div class="prompt-example card">
+      <span class="prompt-example__label">Exemplo</span>
+      <p class="prompt-example__line prompt-example__line--bad">❌ "Escreva um post sobre marketing"</p>
+      <p class="prompt-example__line prompt-example__line--good">
+        ✅ "Escreva um post de LinkedIn (150 palavras, tom direto) anunciando o produto X para
+        gestores de RH, destacando 3 benefícios"
+      </p>
+    </div>
   </section>
 </template>
 
@@ -52,5 +61,35 @@ const tips = [
   font-size: 0.86rem;
   line-height: 1.5;
   color: var(--text-secondary);
+}
+
+.prompt-example {
+  margin-top: 20px;
+  padding: 18px 20px;
+}
+
+.prompt-example__label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.prompt-example__line {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.prompt-example__line--bad {
+  color: var(--text-muted);
+}
+
+.prompt-example__line--good {
+  color: var(--text-primary);
+  font-weight: 500;
 }
 </style>

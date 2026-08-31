@@ -30,7 +30,41 @@
   --status-serious: #ec835a;
   --status-critical: #d03b3b;
 
+  --shadow-nav: rgba(20, 20, 15, 0.08);
+
   --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* Dark theme — neon accents on a near-black ground. Toggled via
+   documentElement[data-theme], set/persisted by SlideDeck.vue. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --page: #0a0a12;
+  --surface-1: #14141f;
+  --surface-2: #1c1c2e;
+  --border: rgba(0, 229, 255, 0.18);
+  --gridline: #26263c;
+
+  --text-primary: #f5f6ff;
+  --text-secondary: #b6b8d6;
+  --text-muted: #82849e;
+
+  --accent-blue: #00e5ff;
+  --accent-orange: #ff9100;
+  --accent-aqua: #00ffc2;
+  --accent-yellow: #f9f900;
+  --accent-magenta: #ff2ec4;
+  --accent-green: #39ff14;
+  --accent-violet: #b026ff;
+  --accent-red: #ff2079;
+
+  --status-good: #39ff14;
+  --status-warning: #f9f900;
+  --status-serious: #ff9100;
+  --status-critical: #ff2079;
+
+  --shadow-nav: rgba(0, 229, 255, 0.28);
 }
 
 /* Baseline sized for viewing on a large TV at a distance — every rem-based
@@ -62,6 +96,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1,

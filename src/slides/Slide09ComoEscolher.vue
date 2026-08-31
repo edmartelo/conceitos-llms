@@ -11,7 +11,7 @@ const rules = [
   {
     scenario: 'Tarefas complexas / código crítico',
     pick: 'Modelo topo de linha',
-    examples: 'ex.: Opus, GPT-5, Gemini Pro',
+    examples: 'ex.: Opus, GPT (linha topo de linha), Gemini Pro',
     color: 'var(--accent-orange)',
   },
   {
@@ -22,7 +22,7 @@ const rules = [
   },
   {
     scenario: 'Dados sensíveis',
-    pick: 'Modelo open source self-hosted',
+    pick: 'Modelo open-weight self-hosted',
     examples: 'ex.: Llama',
     color: 'var(--accent-yellow)',
   },
@@ -35,74 +35,89 @@ const rules = [
     <h2 class="slide-title">Como escolher o modelo certo</h2>
     <p class="slide-subtitle">Critérios: {{ criteria.join(' · ') }}.</p>
 
-    <div class="slide-body rules-list">
-      <div v-for="r in rules" :key="r.scenario" class="rule-row card">
-        <span class="rule-row__bar" :style="{ background: r.color }"></span>
-        <div class="rule-row__scenario">{{ r.scenario }}</div>
-        <div class="rule-row__arrow">→</div>
-        <div class="rule-row__pick">
-          {{ r.pick }}
-          <span class="rule-row__examples">{{ r.examples }}</span>
-        </div>
+    <div class="slide-body">
+      <div class="rules-scroll">
+        <table class="rules-table">
+          <thead>
+            <tr>
+              <th scope="col">Cenário</th>
+              <th scope="col">Modelo recomendado</th>
+              <th scope="col">Exemplos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="r in rules" :key="r.scenario">
+              <th scope="row">
+                <span class="rules-table__dot" :style="{ background: r.color }"></span>
+                {{ r.scenario }}
+              </th>
+              <td class="rules-table__pick">{{ r.pick }}</td>
+              <td class="rules-table__examples">{{ r.examples }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.rules-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.rules-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 14px;
 }
 
-.rule-row {
-  position: relative;
-  padding: 16px 20px 16px 24px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 14px;
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+  font-size: 0.88rem;
 }
 
-.rule-row__bar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  border-radius: 4px 0 0 4px;
+.rules-table th,
+.rules-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--gridline);
 }
 
-.rule-row__scenario {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-.rule-row__arrow {
+.rules-table thead th {
   color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--surface-1);
 }
 
-.rule-row__pick {
-  font-size: 0.92rem;
+.rules-table tbody th {
+  color: var(--text-primary);
+  font-weight: 600;
+  background: var(--surface-1);
+  white-space: nowrap;
+}
+
+.rules-table tbody tr:last-child td,
+.rules-table tbody tr:last-child th {
+  border-bottom: none;
+}
+
+.rules-table__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.rules-table__pick {
   font-weight: 700;
   color: var(--text-primary);
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
 }
 
-.rule-row__examples {
-  font-size: 0.76rem;
-  font-weight: 400;
+.rules-table__examples {
   color: var(--text-muted);
-}
-
-@media (max-width: 700px) {
-  .rule-row {
-    grid-template-columns: 1fr;
-    justify-items: start;
-    gap: 6px;
-  }
+  font-size: 0.82rem;
 }
 </style>
