@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+
+  /* surfaces */
+  --page: #f2f1ec;
+  --surface-1: #ffffff;
+  --surface-2: #eae8e1;
+  --border: rgba(20, 20, 15, 0.14);
+  --gridline: #dedcd3;
+
+  /* ink */
+  --text-primary: #17160f;
+  --text-secondary: #4a4940;
+  --text-muted: #6e6c60;
+
+  /* categorical accents (fixed order, do not reassign) — darkened for
+     contrast against the light theme's page/surface colors */
+  --accent-blue: #1d4ed8;
+  --accent-orange: #c2410c;
+  --accent-aqua: #0f766e;
+  --accent-yellow: #b45309;
+  --accent-magenta: #be185d;
+  --accent-green: #15803d;
+  --accent-violet: #6d28d9;
+  --accent-red: #dc2626;
+
+  /* status (fixed, never reused as series color) */
+  --status-good: #0d8a0d;
+  --status-warning: #b8790a;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* Baseline sized for viewing on a large TV at a distance — every rem-based
+   size in the app (text, spacing, nav controls) scales from this. Dialed
+   back on small screens so it doesn't overflow a phone/tablet layout. */
+html {
+  font-size: 20px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ---- shared slide primitives, used by every slide component ---- */
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 6vw, 88px) clamp(24px, 8vw, 120px);
+  overflow-y: auto;
+}
+
+.slide-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  margin-bottom: 12px;
+}
+
+.slide-title {
+  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.slide-subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.slide-body {
+  margin-top: clamp(24px, 4vw, 44px);
+}
+
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .slide {
+    padding: 24px 20px;
+  }
+}
