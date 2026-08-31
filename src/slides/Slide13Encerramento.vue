@@ -19,7 +19,7 @@ const takeaways = [
       </li>
     </ul>
 
-    <p class="closing-note">Obrigado! Perguntas?</p>
+    <p class="closing-note">Obrigado!</p>
   </section>
 </template>
 

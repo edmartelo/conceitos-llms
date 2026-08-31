@@ -8,7 +8,7 @@ A web-based slide presentation (not a PDF/PowerPoint export) that teaches the ba
 LLMs (Large Language Models) and the main market tools, aimed at an audience that needs an
 accessible, non-jargon explanation with good visual/content balance.
 
-The full content spec (in Portuguese) is in `instrucoes.md` — it defines the required slide
+The full content spec (in Portuguese) is in `SPEC.md` — it defines the required slide
 content, order, and technical constraints, and is the authoritative source for what each slide
 should say. Read it before changing slide content or adding/removing slides.
 
@@ -36,7 +36,7 @@ Vue 3 + Vite, single-page app, no router — it's a slide deck, not a multi-rout
   switch back to `mode="out-in"` without re-testing rapid key-repeat/click navigation.
 - `src/slides/index.js` — the ordered array of `{ component, title }` that defines the deck.
   Add/remove/reorder slides here; each slide is a standalone component under `src/slides/`.
-- `src/slides/*.vue` — one component per slide, matching the structure in `instrucoes.md`.
+- `src/slides/*.vue` — one component per slide, matching the structure in `SPEC.md`.
   Slides that need reusable content pull from `src/data/*.js` (tool cards, timeline entries,
   comparison-table ratings); slides with a one-off visual (the context-window diagram, the
   model-vs-agent flow diagram, the timeline) build it inline with plain CSS/HTML rather than a
@@ -55,4 +55,4 @@ Vue 3 + Vite, single-page app, no router — it's a slide deck, not a multi-rout
   same style.
 - Keep language accessible; don't use technical jargon without explaining it inline.
 - No quiz slide — an interactive quiz was explicitly removed at the user's request even though
-  `instrucoes.md` lists one as an optional slide.
+  `SPEC.md` lists one as an optional slide.

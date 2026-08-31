@@ -4,7 +4,7 @@ Apresentação de slides interativa (web, não é um PDF/PowerPoint exportado) q
 conceitos básicos de LLMs (Large Language Models) e apresenta um panorama das principais
 ferramentas do mercado, com linguagem acessível e sem jargão técnico.
 
-O conteúdo completo (em português) está especificado em [`instrucoes.md`](./instrucoes.md).
+O conteúdo completo (em português) está especificado em [`SPEC.md`](./SPEC.md).
 
 ## Stack
 

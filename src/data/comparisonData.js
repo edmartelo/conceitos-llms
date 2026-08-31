@@ -1,5 +1,5 @@
 // Níveis relativos (1 a 5), não números de benchmark — evita comparações que
-// ficam desatualizadas rápido. Ver instrucoes.md, seção 6.
+// ficam desatualizadas rápido. Ver SPEC.md, seção 6.
 export const LEVELS = ['Baixo', 'Médio', 'Médio-alto', 'Alto', 'Muito alto']
 
 export const comparisonColumns = [
