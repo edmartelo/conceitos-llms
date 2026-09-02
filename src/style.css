@@ -125,7 +125,11 @@ button {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* "safe" falls back to flex-start when content overflows, so the top of
+     the slide (title/eyebrow) stays reachable by scroll instead of being
+     pushed off-screen by centering — see mobile slides taller than the
+     viewport (glossaries, card grids, guardrail lists). */
+  justify-content: safe center;
   padding: clamp(28px, 6vw, 88px) clamp(24px, 8vw, 120px);
   overflow-y: auto;
 }

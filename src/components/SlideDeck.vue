@@ -285,6 +285,8 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
   font-size: 1.05rem;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
@@ -315,6 +317,14 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
   }
   .deck__footer {
     bottom: 16px;
+    gap: 12px;
+  }
+  .deck__dots {
+    gap: 6px;
+  }
+  .deck__dot {
+    width: 8px;
+    height: 8px;
   }
   .deck__counter {
     font-size: 0.75rem;
