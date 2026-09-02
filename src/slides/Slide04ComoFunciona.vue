@@ -19,7 +19,9 @@ function cellClass(i, used) {
         <p class="slide-subtitle">
           Na fase de <strong>treinamento</strong>, o modelo lê uma quantidade enorme de texto
           (livros, artigos, código, sites) e ajusta bilhões de "parâmetros" internos até ficar
-          bom em prever o que vem a seguir. Na hora de responder, ele gera a resposta um
+          bom em prever o que vem a seguir. Esse é o pré-treinamento; depois vem um ajuste
+          adicional que ensina o modelo a seguir instruções e conversar, a diferença entre o
+          modelo base e o modelo instruct/chat do slide anterior. Na hora de responder, ele gera a resposta um
           <strong>token</strong> (pedaço de palavra) de cada vez: a cada passo, calcula qual é o
           próximo token mais provável dado tudo o que já foi dito, acrescenta esse token e
           repete. É por isso que às vezes ele muda de direção no meio de uma resposta.
@@ -28,7 +30,9 @@ function cellClass(i, used) {
         <p class="context-diagram__caption">
           Todo esse texto (o que você escreveu e o que o modelo já gerou) precisa caber na
           <strong>janela de contexto</strong>: uma caixa com espaço limitado que vai enchendo de
-          tokens conforme a conversa cresce, até atingir o limite do modelo.
+          tokens conforme a conversa cresce, até atingir o limite do modelo. Quando o limite é
+          atingido, a parte mais antiga da conversa passa a ficar de fora, por isso o modelo às
+          vezes parece "esquecer" o que foi dito no começo.
         </p>
       </div>
 

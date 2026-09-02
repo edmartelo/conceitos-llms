@@ -31,6 +31,9 @@ const tips = [
         ✅ "Escreva um post de LinkedIn (150 palavras, tom direto) anunciando o produto X para
         gestores de RH, destacando 3 benefícios"
       </p>
+      <p class="prompt-example__line prompt-example__line--iterate">
+        🔁 Depois, peça: "Deixe o tom mais informal e adicione uma chamada para ação no final."
+      </p>
     </div>
   </section>
 </template>
@@ -95,5 +98,9 @@ const tips = [
 .prompt-example__line--good {
   color: var(--text-primary);
   font-weight: 500;
+}
+
+.prompt-example__line--iterate {
+  color: var(--text-secondary);
 }
 </style>

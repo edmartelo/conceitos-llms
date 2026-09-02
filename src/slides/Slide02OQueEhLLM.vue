@@ -34,8 +34,9 @@ const glossary = [
     <h2 class="slide-title">O que é um LLM?</h2>
     <p class="slide-subtitle">
       Um <strong>LLM (Large Language Model)</strong> é um modelo de linguagem treinado em
-      grandes volumes de texto para prever e gerar linguagem, como um leitor que absorveu
-      uma fração enorme da internet e aprendeu os padrões de como as palavras se encaixam.
+      grandes volumes de texto para prever e gerar linguagem, como alguém que leu tanto texto
+      que consegue prever, estatisticamente, qual palavra costuma vir a seguir, sem
+      necessariamente "entender" o conteúdo como uma pessoa entende.
     </p>
 
     <div class="slide-body llm-types">

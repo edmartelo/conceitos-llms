@@ -11,7 +11,7 @@ const rules = [
   {
     scenario: 'Tarefas complexas / código crítico',
     pick: 'Modelo topo de linha',
-    examples: 'ex.: Opus, GPT (linha topo de linha), Gemini Pro',
+    examples: 'ex.: Opus, GPT (modelo topo de linha da OpenAI), Gemini Pro',
     color: 'var(--accent-orange)',
   },
   {
@@ -57,6 +57,11 @@ const rules = [
           </tbody>
         </table>
       </div>
+
+      <p class="table-footnote">
+        Para tarefas complexas, "modelo topo de linha" muitas vezes significa também ativar o
+        modo de raciocínio (visto no slide "O que é um LLM?").
+      </p>
     </div>
   </section>
 </template>
@@ -119,5 +124,11 @@ const rules = [
 .rules-table__examples {
   color: var(--text-muted);
   font-size: 0.82rem;
+}
+
+.table-footnote {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
 }
 </style>

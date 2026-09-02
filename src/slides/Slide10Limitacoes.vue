@@ -15,12 +15,17 @@ const cautions = [
     desc: 'O modelo só "sabe" até a data em que foi treinado. Para informação recente, ele depende de busca ou RAG.',
     status: 'warning',
   },
+  {
+    title: 'Manipulação por conteúdo externo',
+    desc: 'Um agente que lê páginas, e-mails ou documentos pode encontrar instruções escondidas nesse conteúdo e ser levado a executar ações indesejadas.',
+    status: 'warning',
+  },
 ]
 </script>
 
 <template>
   <section class="slide">
-    <p class="slide-eyebrow">Slide de credibilidade</p>
+    <p class="slide-eyebrow">Riscos e cuidados</p>
     <h2 class="slide-title">Limitações e cuidados</h2>
     <p class="slide-subtitle">Nenhum LLM deve ser tratado como uma fonte infalível.</p>
 

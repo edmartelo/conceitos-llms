@@ -17,7 +17,7 @@ export const mainTools = [
     initials: 'C',
     color: 'var(--accent-orange)',
     type: 'Fechado (API/assinatura)',
-    tagline: 'Foco em segurança, tarefas longas e uso de ferramentas (agentic), muito usado por desenvolvedores.',
+    tagline: 'Foco em segurança, tarefas longas e capacidade agentic (agir sozinho usando ferramentas, como no slide de Modelo vs. Agente), muito usado por desenvolvedores.',
     useCaseLabel: 'Caso de uso',
     useCase: 'Revisar um contrato de 50 páginas ou programar um sistema inteiro.',
   },
@@ -53,4 +53,4 @@ export const otherTools = [
 
 export const openWeightModels = ['Llama (Meta)', 'DeepSeek', 'Qwen (Alibaba)', 'Mistral', 'GLM']
 
-export const closedModels = ['GPT (OpenAI)', 'Claude (Anthropic)', 'Gemini (Google)']
+export const closedModels = ['GPT (OpenAI)', 'Claude (Anthropic)', 'Gemini (Google)', 'Grok (xAI)']

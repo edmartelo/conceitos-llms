@@ -2,7 +2,7 @@
 const trends = [
   {
     title: 'Contexto gigante virou padrão',
-    desc: 'Janelas de contexto de cerca de 1 milhão de tokens já são comuns entre os principais players.',
+    desc: 'Janelas de contexto de milhões de tokens já estão disponíveis na maioria dos principais modelos, embora o tamanho padrão ainda varie bastante entre fornecedores.',
     color: 'var(--accent-blue)',
   },
   {
@@ -20,7 +20,7 @@ const trends = [
 
 <template>
   <section class="slide">
-    <p class="slide-eyebrow">Fechamento</p>
+    <p class="slide-eyebrow">Para onde o mercado vai</p>
     <h2 class="slide-title">Tendências do mercado</h2>
 
     <div class="slide-body trends-grid">

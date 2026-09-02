@@ -5,7 +5,7 @@
     <p class="slide-subtitle">
       <strong>LLM</strong> é o "motor de linguagem" que gera texto. <strong>Agente</strong> é um
       sistema que usa esse motor + ferramentas (busca, código, arquivos, apps) para executar
-      tarefas com várias etapas, de forma autônoma (a principal tendência do mercado em 2026).
+      tarefas com várias etapas, de forma autônoma (a principal tendência atual do mercado).
     </p>
 
     <div class="slide-body flow-panels">

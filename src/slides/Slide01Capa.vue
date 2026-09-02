@@ -1,14 +1,14 @@
 <template>
   <section class="slide slide-cover">
-    <p class="slide-eyebrow">Guia rápido · 2026</p>
+    <p class="slide-eyebrow">Guia rápido</p>
     <h1 class="cover-title">LLMs: o que são<br />e como usar bem</h1>
     <p class="slide-subtitle cover-subtitle">
       Conceitos básicos de Large Language Models e um panorama prático das
-      principais ferramentas do mercado, sem jargão técnico sem explicação.
+      principais ferramentas do mercado.
     </p>
     <div class="cover-tags">
       <span class="pill">Conceitos</span>
-      <span class="pill">Ferramentas do mercado</span>
+      <span class="pill">Ferramentas de mercado</span>
       <span class="pill">Como escolher</span>
       <span class="pill">Boas práticas de prompt</span>
     </div>
