@@ -40,17 +40,17 @@
 :root[data-theme='dark'] {
   color-scheme: dark;
 
-  --page: #0a0a12;
-  --surface-1: #14141f;
-  --surface-2: #1c1c2e;
-  --border: rgba(0, 229, 255, 0.18);
-  --gridline: #26263c;
+  --page: #1a1a2e;
+  --surface-1: #16213e;
+  --surface-2: #16213e;
+  --border: rgba(255, 255, 255, 0.12);
+  --gridline: rgba(255, 255, 255, 0.08);
 
-  --text-primary: #f5f6ff;
-  --text-secondary: #b6b8d6;
-  --text-muted: #82849e;
+  --text-primary: #f5f0eb;
+  --text-secondary: #b8b0c8;
+  --text-muted: #b8b0c8;
 
-  --accent-blue: #00e5ff;
+  --accent-blue: #d97757;
   --accent-orange: #ff9100;
   --accent-aqua: #00ffc2;
   --accent-yellow: #f9f900;
@@ -64,7 +64,7 @@
   --status-serious: #ff9100;
   --status-critical: #ff2079;
 
-  --shadow-nav: rgba(0, 229, 255, 0.28);
+  --shadow-nav: rgba(217, 119, 87, 0.28);
 }
 
 /* Baseline sized for viewing on a large TV at a distance — every rem-based
